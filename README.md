@@ -103,12 +103,13 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
 ## Block Diagram
 ``` mermaid
 flowchart
-	n1["Clock Divider"]
-	n1 --- n2["Sine LUT / CORDIC"]
-	n2 --- n3
-	n3["PWM Generator"]
-	n3 --- n4["Dead-Time Logic"]
-	n4 --- n5["Full-Bridge SPWM Output<br>PWM_H1, PWM_L1, PWM_H2, PWM_L2"]
+    n0["Power on Reset 
+    Logic"]
+	n0 --> n1["Clock Divider"]
+	n1 --> n2["Sine LUT / CORDIC"]
+	n2 --> n3["PWM Generator"]
+	n3 --> n4["Dead-Time Logic"]
+	n4 --> n5["Full-Bridge SPWM Output<br>PWM_H1, PWM_L1, PWM_H2, PWM_L2"]
 ```
 
 
@@ -118,7 +119,7 @@ flowchart
 ---
 config:
   kanban:
-    ticketBaseUrl: 'https://github.com/mermaid-js/mermaid/issues/#TICKET#'
+    ticketBaseUrl: 'https://linear.app/voltpak-inverter/issue/#TICKET#'
 ---
 kanban
   Todo
