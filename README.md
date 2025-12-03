@@ -1,12 +1,11 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
-# Tiny Tapeout Verilog Project Template
+# Pure Sine Wave Generator
 - [Read the documentation for project](docs/info.md)
 
 ## Overview
 This project aims to design a digital Pure Sine Wave Generator (PSWG) for controlling a full-bridge inverter using four SPWM (Sinusoidal Pulse Width Modulation) outputs. The system will be implemented in Verilog, prototyped on an FPGA, and prepared for eventual ASIC tape-out. The design provides configurable frequency, amplitude, and dead-time insertion for safe switching of the full-bridge MOSFETs/IGBTs.
 
----
 
 ## Objectives
 - Generate a pure sine wave output for a full-bridge inverter using digital SPWM.
@@ -15,7 +14,6 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
 - Validate the design on FPGA before ASIC tape-out.
 - Provide a modular Verilog implementation suitable for integration with other power electronics controllers.
 
----
 
 ## Functional Requirements
 
@@ -55,7 +53,6 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
 - **Outputs:**
   - `PWM_H1`, `PWM_L1`, `PWM_H2`, `PWM_L2` (digital SPWM outputs)
 
----
 
 ## Non-Functional Requirements
 - FPGA resource efficiency: minimize LUT, FF, and BRAM usage.
@@ -65,14 +62,12 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
 - Testable via simulation (ModelSim, Vivado Simulator) and FPGA validation.
 - Prepare documentation and testbench for verification.
 
----
 
 ## Hardware Requirements
 - FPGA development board with sufficient I/Os (e.g., Xilinx Artix-7, Intel Cyclone V)
 - Optional external MOSFET/IGBT full-bridge test circuit
 - Logic analyzer or oscilloscope for waveform verification
 
----
 
 ## Verification & Testing
 1. **Simulation**
@@ -90,7 +85,6 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
    - PWM frequency accuracy.
    - Dead-time accuracy.
 
----
 
 ## Deliverables
 - Verilog RTL code for SPWM and full-bridge control.
@@ -98,7 +92,6 @@ This project aims to design a digital Pure Sine Wave Generator (PSWG) for contro
 - FPGA bitstream for validation.
 - Documentation including block diagrams, timing diagrams, and configuration guide.
 
----
 
 ## Block Diagram
 ``` mermaid
