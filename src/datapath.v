@@ -10,19 +10,19 @@ module data_path(
 	wire w_1, w_2;
 	
 	
-	spwm s1(
+	spwm spwm1_i(
 		.clk(clk),
 		.sel1(sel1),
 		.out(w_1)
 		);
 	
-	spwm s2(
+	spwm spwm2_i(
 		.clk(clk),
 		.sel1(sel1),
 		.out(w_2)
 		);
 		
-	H_driver H1(
+	H_driver h_driver_i(
 		.clk(clk),
 		.sel2(sel2),
 		.in1(w_1),

@@ -6,17 +6,17 @@ module controller(
 	
 	wire [5:0] sel1_to_sel2;
 	
-	sel1 s1(
+	sel1 sel1_i(
 		.clk(clk),
 		.sel1(sel1_to_sel2)
 		);
 		
-	sel1 s2(
+	sel1 sel2_i(
 		.clk(clk),
 		.sel1(sel1)
 		);
 		
-	sel2 s3(
+	sel2 sel3_i(
 		.clk(clk),
 		.sel1(sel1_to_sel2),
 		.sel2(sel2)

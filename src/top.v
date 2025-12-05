@@ -8,7 +8,7 @@ module top(
 	wire w_sel2;
     wire w_CE;
 	
-	data_path d1(
+	data_path data_path_i(
         .clk(w_CE),
 		.sel1(w_sel1),
 		.sel2(w_sel2),
@@ -16,13 +16,13 @@ module top(
 		.out2(out2)
 		);
 		
-	controller c1(
+	controller controller_i(
         .clk(w_CE),
 		.sel1(w_sel1),
 		.sel2(w_sel2)
 		);
   
-   clk_enable e1(
+   clk_enable clk_enable_i(
      .clk(clk),
      .CE(w_CE)
    );
