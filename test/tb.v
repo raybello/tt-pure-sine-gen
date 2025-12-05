@@ -23,8 +23,10 @@ module tb ();
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 
-  // Replace tt_um_raybello_pure_sine_gen_top with your module name:
-  tt_um_raybello_pure_sine_gen_top pure_sine_gen (
+  wire out1, out2;
+
+  // Replace tt_um_raybello_tt_pure_sine_gen with your module name:
+  tt_um_raybello_tt_pure_sine_gen user_project (
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
@@ -34,5 +36,8 @@ module tb ();
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
   );
+
+  top uut(clk, out1, out2);
+
 
 endmodule
