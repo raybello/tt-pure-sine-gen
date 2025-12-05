@@ -46,3 +46,7 @@ jobs:
       id-token: write # to verify the deployment originates from an appropriate source
     steps:
       - uses: TinyTapeout/tt-gds-action/viewer@ttihp26a
+      
+  deploy:
+    environment:
+      name: github-pages
